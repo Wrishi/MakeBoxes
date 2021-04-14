@@ -1,0 +1,208 @@
+﻿body{
+	background: #0e0e0e;
+	margin:0;
+	padding:0;
+	outline:0;
+	font-size: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+body * {
+	outline: 0;
+}
+.wrap{
+	margin: auto;
+}
+.playset{
+	min-width: 370px;
+	/*background-color: #38B0DE;*/
+	position: fixed;
+	text-align:center;
+	z-index: 100;
+	border-bottom: 2px solid;
+	display:none;
+}
+.playset.active{
+	display: block;
+}
+.controls {
+	background-color: #000;
+}
+.controls a{
+	display:inline-block;
+	font-size: 20px;
+	background-color: #fff;
+	height: 30px;
+	width: 30px;
+	border-radius: 20px;
+	border: 5px solid #000;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.controls a:active, .controls a:active, .controls a[disabled=disabled]{
+	opacity: 0.6;
+}
+.controls a.back{
+	background-image:url('../icons/glyphicons-211-left-arrow.png');
+	background-size: 15px;
+}
+.controls a.refresh{
+	background-image:url('../icons/glyphicons-82-refresh.png');
+	background-size: 15px;
+}
+.controls a.pause{
+	background-image:url('../icons/glyphicons-175-pause.png');
+	background-size: 10px;
+}
+.controls a.play{
+	background-image:url('../icons/glyphicons-174-play.png');
+	background-size: 10px;
+}
+
+.panel{
+	display: inline-block;
+	width: 40%;
+	padding: 10px;
+	opacity: 0.3;
+	vertical-align: top;
+	background-color: #38B0DE;
+	transition: .5s;
+}
+.panel:first-child{
+	margin-left: 0px;
+}
+.panel.active{
+	background-color: #fff;
+	opacity: 1;
+	width: 48%;
+}
+.panel .name{
+	float:left;
+	font-size: 30px;
+	padding: 0 6px;
+	position:absolute;
+}
+.panel .points{
+	float: right;
+	font-size: 56px;
+}
+.panel .timer{
+	position: absolute;
+	font-size: 20px;
+  	top: 90px;
+  	padding: 2px 9px;
+  	background-color: #38B0DE;
+  	border-radius: 5px;
+}
+.playarea{
+	padding: 150px 0px 50px;
+	text-align:center;
+}
+.box{
+	background-color: #2e2e2e;
+	margin: 0 3px;	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 5px;
+	font-size: 30px;
+	line-height: 59px;
+	color: #fff;
+}
+.box span{
+	position:relative;
+	top: -9px;
+}
+.box .diff{
+	position: relative;
+  	float: right;
+  	top: 4px;
+  	font-size: 12px;
+  	right: 4px;}
+.hline{
+	background-color: #4d4d4d;
+	display: inline-block;
+	width: 40px;
+	height: 15px;
+	margin: 3px;
+	border-radius: 5px;
+}
+.vline{
+	background-color: #4d4d4d;
+	display: inline-block;
+	width: 15px;
+	height: 40px;
+	border-radius: 5px;
+}
+.emptybox{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 3px 0;
+}
+.light{
+	background-color: #38B0DE;
+}
+.startoverlay,
+.gameoverlay,
+.pauseoverlay{
+	position: absolute;
+  	height: 100%;
+  	width: 80%;
+  	top: 0px;
+  	left: 0px;
+  	background-color: rgba(0,0,0,0.8);
+  	text-align: center;
+  	font-size: 20px;
+  	color: #38B0DE;
+  	padding: 0 10%;
+}
+.pauseoverlay,
+.gameoverlay{
+	position: fixed;
+	display:none;
+}
+.gameoverlay > div,
+.startoverlay > div,
+.pauseoverlay > div{
+	margin-bottom: 20px;
+}
+.gameoverlay > div:first-child,
+.startoverlay > div:first-child{
+	margin-top: 150px;
+}
+.pauseoverlay > div:first-child{
+	margin-top: 150px;
+}
+.winnername{
+	font-size: 60px;
+	color: #fff;
+}
+select, input[type=text]{
+	font-size: 30px;
+  	border-radius: 10px;
+  	border: 5px solid rgba(0,0,0,0.6);
+  	outline: none;
+  	text-indent: 12px;
+  	width: 100%;
+	color: rgba(0,0,0,0.6);
+	max-width: 300px;
+}
+input[type=text]:focus{
+	border-color: #38B0DE;
+}
+.ui-select span{
+	display: none;
+}
+button{
+	background-color: #38B0DE;
+	color: rgba(0,0,0,0.6);
+	font-size:30px;
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0.6);
+  	width: 100%;
+   	outline:none;
+   	padding: 10px 0px;
+   	max-width: 300px;
+}
+button:active,button:focus{
+	box-shadow: inset 1px 1px 1px 2px rgba(0,0,0,0.6);
+}
